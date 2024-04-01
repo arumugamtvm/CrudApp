@@ -14,7 +14,7 @@ $("#update_user").submit(function(event){
 
 
     var request = {
-        "url" : `https://crudapp-dq06.onrender.com/api/users/${data.id}`,
+        "url" : `http://localhost:${process.env.PORT}/api/users/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
@@ -31,7 +31,7 @@ if(window.location.pathname == "/"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `https://crudapp-dq06.onrender.com/api/users/${id}`,
+            "url" : `http://localhost:${process.env.PORT}/api/users/${id}`,
             "method" : "DELETE"
         }
 
